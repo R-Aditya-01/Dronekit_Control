@@ -17,7 +17,6 @@ def arm_and_takeoff(altitude):
         time.sleep(1)
 
 
-
     print("[INFO] Taking off....")
     vehicle.simple_takeoff(altitude)
 
