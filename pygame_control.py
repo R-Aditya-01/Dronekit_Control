@@ -13,6 +13,7 @@ print("connected successfully")
 gnd_speed=40
 
 
+ 
 def arm_and_takeoff(aTargetAltitude):
     print("Basic pre-arm checks")
     # Don't try to arm until autopilot is ready
