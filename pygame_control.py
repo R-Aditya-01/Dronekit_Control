@@ -58,7 +58,13 @@ def send_ned_velocity(velocity_x, velocity_y, velocity_z, duration):
         velocity_x, velocity_y, velocity_z, # x, y, z velocity in m/s
         0, 0, 0, # x, y, z acceleration (not supported yet, ignored in GCS_Mavlink)
         0, 0)    # yaw, yaw_rate (not supported yet, ignored in GCS_Mavlink)
-
+        # Set up velocity mappings
+        # velocity_x > 0 => fly North
+        # velocity_x < 0 => fly South
+        # velocity_y > 0 => fly East
+        # velocity_y < 0 => fly West
+        # velocity_z < 0 => ascend
+        # velocity_z > 0 => descend
 
     # send command to vehicle 
     for x in range(0,duration):
